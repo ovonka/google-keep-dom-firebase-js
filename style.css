@@ -6,6 +6,7 @@
     font-family: 'Roboto', sans-serif;
 
 }
+/* AUTHENTICATION */
 .auth-container {
   position: absolute;
   top: 40%;
@@ -23,7 +24,7 @@
 .auth-title{
   position: relative;
   top: 25%;
-  left: 45%;
+  left: 44%;
   color: #5f6368;
   margin-bottom: 10px;
 }
