@@ -23,7 +23,11 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="firebaseui-auth-container"></div>
+    <div class="auth-container">
+      <div class="auth-title"><h2> <em>Google Keep</em></h2></div>
+      <div id="firebaseui-auth-container"></div>
+
+    </div>
     <div id="app">
       <nav>
         <div class="logo-area">
@@ -265,16 +269,16 @@
       </main>
     </div>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-      https://firebase.google.com/docs/web/setup#available-libraries -->
-
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
-
+     <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+ 
+     <!-- Add Firebase products that you want to use -->
+     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+ 
     <script>
       // Your web app's Firebase configuration
       var firebaseConfig = {
@@ -283,13 +287,42 @@
         projectId: "keep-49aa6",
         storageBucket: "keep-49aa6.appspot.com",
         messagingSenderId: "214968142062",
-        appId: "1:214968142062:web:9b1777e32babdebb300bff",
+        appId: "1:214968142062:web:9b1777e32babdebb300bff"
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
 
       const auth = firebase.auth();
-      console.log(auth);
+      const db = firebase.firestore();
+
+//      // Add a new document in collection "users"
+// db.collection("users").doc("actualsigneinduserid").set({
+//    notes: [{
+//      id: "2737sjhajja",
+//      title: "title",
+//      text: "text"
+
+//    }]
+// })
+// .then(() => {
+//     console.log("Document successfully written!");
+// })
+// .catch((error) => {
+//     console.error("Error writing document: ", error);
+// });
+
+// var docRef = db.collection("users").doc("actualsigneinduserid");
+
+// docRef.get().then((doc) => {
+//     if (doc.exists) {
+//         console.log("Document data:", doc.data().notes);
+//     } else {
+//         // doc.data() will be undefined in this case
+//         console.log("No such document!");
+//     }
+// }).catch((error) => {
+//     console.log("Error getting document:", error);
+// });
     </script>
 
     <script
