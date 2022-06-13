@@ -1,4 +1,10 @@
 @media (max-width: 480px){
+    .auth-container{
+        padding: 0 20px;
+    }
+    .auth-title{
+        left: 33%;
+    }
     .settings-area :nth-child(2n){
      display: none;
     }
