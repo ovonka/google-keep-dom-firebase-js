@@ -8,7 +8,7 @@
         margin: 0;
     }
     .search-area span{
-        margin-left: 35px;
+        margin-left: 5px;
     }
     .search-area input {
         display: none;
@@ -26,5 +26,20 @@
     }
     .note{
         width: 300px;
+    }
+    .icons .tooltip{
+        margin:0;
     } 
+    .small-icon{
+        color: black;
+        font-size: 0.9rem;
+      }
+      .form .form-actions{
+          flex-wrap: wrap;
+          justify-content: flex-end;
+      }
+      .logout .material-icons-outlined{
+          display: none;
+      }
+
 }
