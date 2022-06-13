@@ -209,7 +209,7 @@ class Note {
       this.notes = this.notes.filter((note) => note.id != id);
       this.render();
     }
-
+      //  HOVER EFFECT FOR SIDEBAR
     handleMouseOverNote(element) {
         const $note = document.querySelector("#" + element.id);
         const $checkNote = $note.querySelector(".check-circle");
@@ -237,6 +237,7 @@ class Note {
           this.$sidebarActiveItem.classList.remove("sidebar-active-item");
         }
       }
+      // FIRESTORE DATA FETCHING
       fetchNotesFromDB(){
       var docRef = db.collection("users").doc(this.userId);
       docRef.get().then((doc) => {
@@ -263,6 +264,7 @@ class Note {
 
 });
       }
+      // FIRESTORE READ, UPDATE AND DELETE
       saveNotes() {    
         db.collection("users").doc(this.userId).set({
           notes: this.notes
@@ -281,7 +283,6 @@ class Note {
       }
     
     
-  
     displayNotes() {
       this.$notes.innerHTML = this.notes.map((note) =>
         `
